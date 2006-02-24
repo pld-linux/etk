@@ -1,10 +1,10 @@
+%define	_snap	20060223
 Summary:	Toolkit based on the EFL
 Name:		etk
 Version:	0.1
-%define	_snap	20060223
 Release:	0.%{_snap}.1
 License:	BSD
-Group:		X11/Window Managers/Tools
+Group:		Libraries
 Source0:	http://sparky.homelinux.org/snaps/enli/e17/proto/%{name}-%{_snap}.tar.bz2
 # Source0-md5:	134cea1543a9ccca76d5d87ec8a016eb
 URL:		http://enlightenment.org/
