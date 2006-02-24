@@ -67,6 +67,7 @@ for FONT in $VERA; do
 	rm -f $FONT
 	ln -s %{_fontsdir}/TTF/$FONT .
 done
+cd -
 
 %find_lang %{name}
 
