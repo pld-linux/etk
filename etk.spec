@@ -1,5 +1,6 @@
 %define	_snap	20060223
 Summary:	Toolkit based on the EFL
+Summary(pl):	Toolkit oparty na EFL
 Name:		etk
 Version:	0.1
 Release:	0.%{_snap}.1
@@ -18,6 +19,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Enlightenment Foundations Library based toolkit.
+
+%description -l pl
+Toolkit oparty na EFL (Enlightenment Foundations Library).
 
 %package devel
 Summary:	Header files for etk library
@@ -41,7 +45,7 @@ Requires:	%{name}-devel = %{version}-%{release}
 Static etk library.
 
 %description static -l pl
-Statyczna biblioteka etk
+Statyczna biblioteka etk.
 
 %prep
 %setup -q -n %{name}
@@ -81,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog INSTALL README TODO
 %attr(755,root,root) %{_bindir}/etk_test
-%attr(755,root,root) %{_libdir}/libetk.*.*.*
+%attr(755,root,root) %{_libdir}/libetk.so.*.*.*
 %{_datadir}/%{name}
 
 %files devel
