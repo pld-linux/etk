@@ -1,4 +1,4 @@
-%define	_snap	20060309
+%define	_snap	20060625
 Summary:	Toolkit based on the EFL
 Summary(pl):	Toolkit oparty na EFL
 Name:		etk
@@ -7,7 +7,7 @@ Release:	0.%{_snap}.1
 License:	BSD
 Group:		Libraries
 Source0:	http://sparky.homelinux.org/snaps/enli/e17/proto/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	78d9a0bd855f555015297a3a7a41f3c1
+# Source0-md5:	c105a19c8b523a573933d581b2fa79e3
 URL:		http://enlightenment.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
