@@ -1,4 +1,4 @@
-%define	_snap	20060625
+%define	_snap	20060704
 Summary:	Toolkit based on the EFL
 Summary(pl):	Toolkit oparty na EFL
 Name:		etk
@@ -7,13 +7,14 @@ Release:	0.%{_snap}.1
 License:	BSD
 Group:		Libraries
 Source0:	http://sparky.homelinux.org/snaps/enli/e17/proto/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	c105a19c8b523a573933d581b2fa79e3
+# Source0-md5:	bb42f7a94f3dd5ae1148227ff4cb7037
 URL:		http://enlightenment.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	edje
 BuildRequires:	edje-devel
 BuildRequires:	libtool
+BuildRequires:	sed >= 4.0
 Requires:	fonts-TTF-bitstream-vera
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,6 +50,7 @@ Statyczna biblioteka etk.
 
 %prep
 %setup -q -n %{name}
+sed -e '/SUBDIRS/s/$/ po/' -i Makefile.am
 
 %build
 %{__libtoolize}
