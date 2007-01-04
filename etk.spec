@@ -3,7 +3,7 @@ Summary:	Toolkit based on the EFL
 Summary(pl):	Toolkit oparty na EFL
 Name:		etk
 Version:	0.1
-Release:	0.%{_snap}.1
+Release:	0.%{_snap}.2
 License:	BSD
 Group:		Libraries
 Source0:	http://sparky.homelinux.org/snaps/enli/e17/proto/%{name}-%{_snap}.tar.bz2
