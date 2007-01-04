@@ -3,7 +3,7 @@ Summary:	Toolkit based on the EFL
 Summary(pl):	Toolkit oparty na EFL
 Name:		etk
 Version:	0.1
-Release:	0.%{_snap}.2
+Release:	0.%{_snap}.3
 License:	BSD
 Group:		Libraries
 Source0:	http://sparky.homelinux.org/snaps/enli/e17/proto/%{name}-%{_snap}.tar.bz2
@@ -53,6 +53,7 @@ Statyczna biblioteka etk.
 sed -e '/SUBDIRS/s/$/ po/' -i Makefile.am
 
 %build
+touch config.rpath
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
