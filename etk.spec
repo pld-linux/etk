@@ -1,6 +1,6 @@
 %define	_snap	20060704
 Summary:	Toolkit based on the EFL
-Summary(pl):	Toolkit oparty na EFL
+Summary(pl.UTF-8):   Toolkit oparty na EFL
 Name:		etk
 Version:	0.1
 Release:	0.%{_snap}.3
@@ -21,31 +21,31 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Enlightenment Foundations Library based toolkit.
 
-%description -l pl
+%description -l pl.UTF-8
 Toolkit oparty na EFL (Enlightenment Foundations Library).
 
 %package devel
 Summary:	Header files for etk library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki etk
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki etk
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 This is the package containing the header files for etk library.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag≥Ûwkowe biblioteki etk.
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nag≈Ç√≥wkowe biblioteki etk.
 
 %package static
 Summary:	Static etk library
-Summary(pl):	Statyczna biblioteka etk
+Summary(pl.UTF-8):   Statyczna biblioteka etk
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static etk library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka etk.
 
 %prep
