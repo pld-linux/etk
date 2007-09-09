@@ -8,7 +8,7 @@ License:	BSD
 Group:		Libraries
 Source0:	http://sparky.homelinux.org/snaps/enli/e17/proto/%{name}-%{_snap}.tar.bz2
 # Source0-md5:	bb42f7a94f3dd5ae1148227ff4cb7037
-URL:		http://enlightenment.org/
+URL:		http://enlightenment.org/p.php?p=about/libs/etk
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	edje
