@@ -1,3 +1,8 @@
+#
+%define		ecore_ver	0.9.9
+%define		edje_ver	0.5.0
+%define		evas_ver	0.9.9
+
 Summary:	Toolkit based on the EFL
 Summary(pl.UTF-8):	Toolkit oparty na EFL
 Name:		etk
@@ -11,10 +16,10 @@ URL:		http://enlightenment.org/p.php?p=about/libs/etk
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.4
 # ecore-file ecore-x ecore-fb
-BuildRequires:	ecore-devel >= 0.9.9
-BuildRequires:	edje >= 0.5.0
-BuildRequires:	edje-devel >= 0.5.0
-BuildRequires:	evas-devel >= 0.9.9
+BuildRequires:	ecore-devel >= %{ecore_ver}
+BuildRequires:	edje >= %{edje_ver}
+BuildRequires:	edje-devel >= %{edje_ver}
+BuildRequires:	evas-devel >= %{evas_ver}
 BuildRequires:	gettext-devel >= 0.14.1
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -32,11 +37,11 @@ Toolkit oparty na EFL (Enlightenment Foundations Library).
 Summary:	EFL toolkit library
 Summary(pl.UTF-8):	Biblioteka toolkitu EFL.
 Group:		Libraries
-Requires:	ecore-fb >= 0.9.9
-Requires:	ecore-file >= 0.9.9
-Requires:	ecore-x >= 0.9.9
-Requires:	edje-libs >= 0.5.0
-Requires:	evas >= 0.9.9
+Requires:	ecore-fb >= %{ecore_ver}
+Requires:	ecore-file >= %{ecore_ver}
+Requires:	ecore-x >= %{ecore_ver}
+Requires:	edje-libs >= %{edje_ver}
+Requires:	evas >= %{evas_ver}
 Conflicts:	etk < 0.1.0.003
 
 %description libs
@@ -52,9 +57,9 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki etk
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 # ecore-file ecore-x ecore-fb
-Requires:	ecore-devel >= 0.9.9
-Requires:	edje-devel >= 0.5.0
-Requires:	evas-devel >= 0.9.9
+Requires:	ecore-devel >= %{ecore_ver}
+Requires:	edje-devel >= %{edje_ver}
+Requires:	evas-devel >= %{evas_ver}
 
 %description devel
 This is the package containing the header files for etk library.
