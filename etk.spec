@@ -1,17 +1,17 @@
 #
-%define		ecore_ver	0.9.9
-%define		edje_ver	0.5.0
-%define		evas_ver	0.9.9
+%define		ecore_ver	0.9.9.043
+%define		edje_ver	0.9.9.043
+%define		evas_ver	0.9.9.043
 
 Summary:	Toolkit based on the EFL
 Summary(pl.UTF-8):	Toolkit oparty na EFL
 Name:		etk
-Version:	0.1.0.003
+Version:	0.1.0.042
 Release:	1
 License:	BSD
 Group:		Libraries
-Source0:	http://enlightenment.freedesktop.org/files/%{name}-%{version}.tar.gz
-# Source0-md5:	52e1adf8cc840d486e21bf439c68f041
+Source0:	http://download.enlightenment.org/snapshots/2008-01-25/%{name}-%{version}.tar.bz2
+# Source0-md5:	6c1f4c204f2227476cb232127156113f
 URL:		http://enlightenment.org/p.php?p=about/libs/etk
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.4
@@ -124,14 +124,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files libs
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libetk.so.*.*.*
+%attr(755,root,root) %{_libdir}/libetk.so.*
 %dir %{_libdir}/etk
 %dir %{_libdir}/etk/engines
 %attr(755,root,root) %{_libdir}/etk/engines/ecore_*.so
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/etk-config
 %attr(755,root,root) %{_libdir}/libetk.so
 %{_libdir}/libetk.la
 %{_includedir}/etk
