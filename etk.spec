@@ -13,8 +13,8 @@ Group:		Libraries
 Source0:	http://download.enlightenment.org/snapshots/2008-01-25/%{name}-%{version}.tar.bz2
 # Source0-md5:	6c1f4c204f2227476cb232127156113f
 URL:		http://enlightenment.org/p.php?p=about/libs/etk
-BuildRequires:	autoconf
-BuildRequires:	automake >= 1.4
+BuildRequires:	autoconf >= 2.52
+BuildRequires:	automake >= 1.6
 # ecore-file ecore-x ecore-fb
 BuildRequires:	ecore-devel >= %{ecore_ver}
 BuildRequires:	edje >= %{edje_ver}
@@ -117,14 +117,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog README TODO
+%doc AUTHORS COPYING README TODO
 %attr(755,root,root) %{_bindir}/etk_prefs
 %attr(755,root,root) %{_bindir}/etk_test
 %{_datadir}/%{name}
 
 %files libs
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libetk.so.*
+%attr(755,root,root) %{_libdir}/libetk.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libetk.so.1
 %dir %{_libdir}/etk
 %dir %{_libdir}/etk/engines
 %attr(755,root,root) %{_libdir}/etk/engines/ecore_*.so
