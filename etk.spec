@@ -1,17 +1,18 @@
 #
-%define		ecore_ver	0.9.9.043
-%define		edje_ver	0.9.9.043
-%define		evas_ver	0.9.9.043
+%define		ecore_ver	0.9.9.044
+%define		edje_ver	0.9.9.044
+%define		evas_ver	0.9.9.044
+%define		_snap	20080813
 
 Summary:	Toolkit based on the EFL
 Summary(pl.UTF-8):	Toolkit oparty na EFL
 Name:		etk
-Version:	0.1.0.042
-Release:	1
+Version:	0.1.0.043
+Release:	0.%{_snap}.1
 License:	BSD
 Group:		Libraries
-Source0:	http://download.enlightenment.org/snapshots/2008-01-25/%{name}-%{version}.tar.bz2
-# Source0-md5:	6c1f4c204f2227476cb232127156113f
+Source0:	%{name}-%{version}-%{_snap}.tar.bz2
+# Source0-md5:	77da768fe476aa88f579eb0796b456f7
 URL:		http://enlightenment.org/p.php?p=about/libs/etk
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
@@ -20,6 +21,7 @@ BuildRequires:	ecore-devel >= %{ecore_ver}
 BuildRequires:	edje >= %{edje_ver}
 BuildRequires:	edje-devel >= %{edje_ver}
 BuildRequires:	evas-devel >= %{evas_ver}
+BuildRequires:	gettext-autopoint
 BuildRequires:	gettext-devel >= 0.14.1
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -80,9 +82,10 @@ Static etk library.
 Statyczna biblioteka etk.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}-%{_snap}
 
 %build
+%{__autopoint}
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
