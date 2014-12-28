@@ -22,7 +22,7 @@ BuildRequires:	edje >= %{edje_ver}
 BuildRequires:	edje-devel >= %{edje_ver}
 BuildRequires:	evas-devel >= %{evas_ver}
 BuildRequires:	gettext-autopoint
-BuildRequires:	gettext-devel >= 0.14.1
+BuildRequires:	gettext-tools >= 0.14.1
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Requires:	%{name}-libs = %{version}-%{release}
